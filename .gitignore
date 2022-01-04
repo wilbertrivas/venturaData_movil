@@ -12,4 +12,6 @@
 /captures
 .externalNativeBuild
 .cxx
-/app/src/main/java/com/example/vg_appcostos/ConexionesDB
+/app/src/main/java/com/example/vg_appcostos/ConexionesDB/Ccarga_GP.java
+/app/src/main/java/com/example/vg_appcostos/ConexionesDB/Ccarga_OPP.java
+/app/src/main/java/com/example/vg_appcostos/ConexionesDB/Costos_VG.java
