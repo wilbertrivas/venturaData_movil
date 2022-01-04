@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vg_appcostos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoventuradata"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Reporte_Registro_MvtoEquipo"></activity>
+        <activity android:name=".Reporte_Registro_MvtoCarbon" />
+        <activity android:name=".Modulo_Equipo_cierre_StandBy" />
+        <activity android:name=".Modulo_equipo_finalizar_ciclo_equipo" />
+        <activity android:name=".modulo_equipo_iniciar_ciclo_equipo" />
+        <activity android:name=".Modulo_carbon_finalizar_ciclo_equipo" />
+        <activity android:name=".moduloCarbon_finalizar_descargueVehiculo" /> <!-- activity android:name=".moduloCarbon_finalizarDescargueVehiculo" / -->
+        <activity android:name=".ModuloCarbon_iniciar_ciclo_equipo" />
+        <activity android:name=".Modulo_carbon_iniciar_descargueVehiculo" />
+        <activity android:name=".Menu" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

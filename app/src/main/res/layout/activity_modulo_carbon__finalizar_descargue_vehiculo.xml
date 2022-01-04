@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#D6EAF8"
+    tools:context=".moduloCarbon_finalizar_descargueVehiculo">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FINALIZAR DESCARGUE VEHÍCULO"
+                android:textColor="#4A235A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif-condensed-light"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="17dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                card_view:cardBackgroundColor="#ECF2FB">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="INFORMACIÓN DEL USUARIO:"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:gravity="center"
+                        android:textColor="#154360"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/usuarioCodigoS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CÓDIGO:"
+                            android:textColor="#34495E"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="5dp"/>
+                        <TextView
+                            android:id="@+id/usuarioCodigo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/usuarioNombreS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="NOMBRE: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/usuarioNombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                card_view:cardBackgroundColor="#ECF2FB">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SELECCIONAR PLACA:"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:gravity="left"
+                        android:textColor="#154360"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="PLACA"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:textColor="#34495E"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <Spinner
+                            android:id="@+id/spinnerPlaca"
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent" />
+                        <EditText
+                            android:id="@+id/placa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Buscar Placa"
+                            android:inputType="textPersonName" />
+                        <ImageView
+                            android:id="@+id/recargarPlaca"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@mipmap/refresh" />
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp" />
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/textView233"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="INFORMACIÓN DEL VEHÍCULO:"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:textColor="#154360"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                    <View
+                        android:id="@+id/divider6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/placaSeleccionadaS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="PLACA: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/placaSeleccionada"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/articuloS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="ARTICULO: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/articulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/clienteS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="CLIENTE: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/cliente"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/transportadoraS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="TRANSPORTADORA: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/transportadora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/ordenS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="ORDEN: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/orden"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/depositoS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="DEPOSITO: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/deposito"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/pesoLlenoS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="PESO LLENO: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/pesoLleno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/fechaTaraS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="FECHA TARA: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/fechaTara"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/fechaInicioDescargueS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="FECHA INICIO DESCARGUE: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/fechaInicioDescargue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/centroOperacionS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="CENTRO OPERACIÓN: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/centroOperacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/subcentroCostoS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="SUBCENTRO COSTO: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/subcentroCosto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/auxCentroCostoS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="SITIO ORIGEN (C.C.A): "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/auxCentroCosto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/text_BodegaDestinoS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:text="SITIO DESTINO (C.C.A): "
+                            android:textColor="#34495E"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/text_BodegaDestino"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/text_laborRealizadaS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="LABOR REALIZADA: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/text_laborRealizada"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/usuarioQuieRegistraS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="USU. REGISTRÓ: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/usuarioQuieRegistra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/estadoMvtoCarbonS"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="ESTADO: "
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#34495E"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/estadoMvtoCarbon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="EQUIPOS ENCARGADOS DEL DESCARGUE:"
+                        android:layout_marginLeft="5dp"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:textSize="14sp"
+                        android:textColor="#34495E"
+                        android:textStyle="bold"
+                        />
+                    <Spinner
+                        android:id="@+id/spinnerListadoEquipos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/holo_blue_dark"
+                card_view:cardBackgroundColor="#ECF2FB">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/textViewLavadoDeVehiculo"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="LAVADO DE VEHÍCULO?:"
+                        android:layout_marginLeft="5dp"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:textSize="14sp"
+                        android:textColor="#34495E"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spinnerlavadoVehiculo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewMensajeLavadoVehiculo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SELECCIONE QUIEN REALIZA EL LAVADO DEL VEHÍCULO:"
+                        android:layout_marginLeft="5dp"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:textSize="14sp"
+                        android:textColor="#34495E"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spinnerMotivoLavadolistadoVehículo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"/>
+                    <TextView
+                        android:id="@+id/TextView_observacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OBSERVACIÓN:"
+                        style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                        android:textSize="14sp"
+                        android:textColor="#34495E"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/actividad_observacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+                </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                card_view:cardBackgroundColor="#ECF2FB">
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/Btn_Atras"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@mipmap/back"
+                    android:foreground="@mipmap/back" />
+
+                <Button
+                    android:id="@+id/bntFinalizarDescargue"
+                    android:layout_width="175dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_redondeado"
+                    android:text="FINALIZAR DESCARGUE " />
+
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

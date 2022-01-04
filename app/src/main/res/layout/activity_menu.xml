@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    android:background="#D6EAF8"
+    tools:context=".Menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_x="1dp"
+        android:layout_y="-1dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardBackgroundColor="#ECF2FB"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/menuPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#A0D4DF"
+                >
+                <ImageView
+                    android:id="@+id/bntSalir"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    card_view:srcCompat="@drawable/icon_exit"
+                    android:layout_alignParentLeft="true"
+                    tools:ignore="VectorDrawableCompat" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="MENU PRINCIPAL"
+                    android:textColor="#4A235A"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    card_view:fontFamily="sans-serif-condensed-light"
+                    tools:layout_editor_absoluteX="79dp"
+                    tools:layout_editor_absoluteY="17dp" />
+            </LinearLayout>
+
+        <!--androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_launcher_background"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            card_view:cardBackgroundColor="#ECF2FB">
+        </androidx.cardview.widget.CardView-->
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardBackgroundColor="#ECF2FB"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iconImagenView"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        card_view:srcCompat="@mipmap/icon_persona2"
+                        android:layout_alignParentLeft="true"
+                        tools:ignore="VectorDrawableCompat"/>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@+id/iconImagenView"
+                        android:layout_toRightOf="@+id/iconImagenView">
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="INFORMACIÓN DEL USUARIO"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:gravity="left"
+                            android:textColor="#154360"
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:id="@+id/usuarioCodigoS"
+                                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CÓDIGO:"
+                                android:textColor="#34495E"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="5dp"/>
+                            <TextView
+                                android:id="@+id/codigo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:id="@+id/usuarioNombreS"
+                                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="NOMBRE: "
+                                android:layout_marginLeft="5dp"
+                                android:textColor="#34495E"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/nombre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:id="@+id/zonaTrabajoS"
+                                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="ZONA TRABAJO: "
+                                android:layout_marginLeft="5dp"
+                                android:textColor="#34495E"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/zonaTrabajo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardBackgroundColor="#ECF1FE"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#A0D4DF"
+                        >
+                        <ImageView
+                            android:id="@+id/iconImagenView3"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            card_view:srcCompat="@drawable/icon_vehicle"
+                            android:layout_alignParentLeft="true"
+                            tools:ignore="VectorDrawableCompat" />
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MODULO CARBÓN"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:gravity="left"
+                            android:textColor="#154360"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_CarbonIniciarDescargueVehiculo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+
+                        android:background="@drawable/btn_redondeado"
+
+                        android:text="INICIAR ACTIVIDAD VEHICULO"
+                        android:textColor="#34495E"
+                        android:textSize="16sp" />
+                    <!--android:drawableLeft="@drawable/icon_equip"-->
+                    <Button
+                        android:id="@+id/btn_CarbonCerrarDescargueVehiculo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_redondeado"
+                        android:text="CERRAR ACTIVIDAD VEHICULO"
+                        android:textColor="#34495E"
+                        android:textSize="16sp" />
+
+                    <!--Button
+                        android:id="@+id/btn_CarbonActualizar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Modificar" /-->
+
+                </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_CarbonIniciarCicloEquipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_redondeado"
+                        android:text="INICIAR CICLO EQUIPO"
+                        android:textColor="#34495E"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_CarbonCerrarCicloEquipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_redondeado"
+                        android:text="CERRAR CICLO EQUIPO"
+                        android:textColor="#34495E"
+                        android:textSize="16sp" />
+
+                    <!--Button
+                        android:id="@+id/btn_CarbonActualizar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Modificar" /-->
+                </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                card_view:cardCornerRadius="20dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardBackgroundColor="#ECF1FE"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#A0D4DF"
+                    >
+                    <ImageView
+                        android:id="@+id/iconImagenView31"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        card_view:srcCompat="@drawable/icon_equip"
+                        android:layout_alignParentLeft="true"
+                        tools:ignore="VectorDrawableCompat" />
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MODULO EQUIPO"
+                            style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                            android:gravity="left"
+                            android:textColor="#154360"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_EquipoIniciarCicloEquipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_redondeado"
+                    android:text="INICIAR CICLO EQUIPO"
+                    android:textColor="#34495E"
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:id="@+id/btn_EquipoCerrarCicloEquipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_redondeado"
+                    android:text="CERRAR CICLO EQUIPO"
+                    android:textColor="#34495E"
+                    android:textSize="16sp" />
+                </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                <!--Button
+                    android:id="@+id/btn_EquipoActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MODIFICAR" /-->
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardBackgroundColor="#ECF1FE"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#A0D4DF"
+            >
+            <ImageView
+                android:id="@+id/iconImagenView313"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                card_view:srcCompat="@drawable/icon_report4"
+                android:layout_alignParentLeft="true"
+                tools:ignore="VectorDrawableCompat" />
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REPORTES"
+                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                android:gravity="left"
+                android:textColor="#154360"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_reporteModuloCarbon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_redondeado"
+                    android:text="MODULO CARBÓN"
+                    android:textColor="#34495E"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_reporteModuloEquipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_redondeado"
+                    android:text="MODULO EQUIPO"
+                    android:textColor="#34495E"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+            <!--TextView
+                android:id="@+id/textView4"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:text="MODULO AGUA"
+                android:textColor="#8BC34A"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif-condensed-light"
+                tools:layout_editor_absoluteX="79dp"
+                tools:layout_editor_absoluteY="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_AguaRegistrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="REGISTRAR" />
+
+                <Button
+                    android:id="@+id/btn_AguaConsultar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CONSULTAR" />
+
+                <Button
+                    android:id="@+id/btn_AguaActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MODIFICAR" />
+            </LinearLayout-->
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</AbsoluteLayout>
